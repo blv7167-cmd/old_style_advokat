@@ -8,7 +8,6 @@
     <!-- SEO мета-теги -->
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pisarev-top.ru">
-    <!-- Yandex.Metrika и Google Analytics будут добавлены ниже -->
     <!-- Fonts & Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -26,14 +25,12 @@
             line-height: 1.45;
         }
 
-        /* Container */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Типографика */
         h1, h2, h3, h4, .oldstyle-title {
             font-family: 'Playfair Display', 'Times New Roman', serif;
             font-weight: 600;
@@ -66,7 +63,6 @@
             color: #1e3a2f;
         }
 
-        /* Кнопки с "тиснением" */
         .btn {
             display: inline-block;
             background: transparent;
@@ -103,7 +99,6 @@
             border-color: #b8860b;
         }
 
-        /* Hero */
         .hero {
             padding: 60px 0 40px;
             background: rgba(255, 248, 235, 0.7);
@@ -134,6 +129,11 @@
             box-shadow: 12px 12px 24px rgba(0,0,0,0.2);
             border: 3px solid #dac292;
             filter: sepia(0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-image img:hover {
+            transform: scale(1.02);
         }
 
         .badge {
@@ -152,7 +152,6 @@
             margin: 20px 0;
         }
 
-        /* Карточки */
         .services-grid, .reviews-grid, .faq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -182,7 +181,6 @@
             margin: 12px 0;
         }
 
-        /* Старинные разделители */
         .divider {
             text-align: center;
             margin: 48px 0;
@@ -191,7 +189,6 @@
             letter-spacing: 8px;
         }
 
-        /* Шаги */
         .steps {
             display: flex;
             flex-wrap: wrap;
@@ -212,7 +209,6 @@
             color: #b8860b;
         }
 
-        /* Формы */
         .form-group {
             margin-bottom: 20px;
         }
@@ -237,7 +233,41 @@
             font-size: 0.9rem;
         }
 
-        /* Footer */
+        /* Галерея фотографий */
+        .gallery {
+            margin: 40px 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            background: #fffef7;
+            border: 1px solid #dacaa2;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 8px 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid #dac292;
+            filter: sepia(0.15);
+        }
+        .gallery-item p {
+            margin-top: 12px;
+            font-style: italic;
+            color: #800020;
+            font-weight: 500;
+        }
+
         footer {
             background: #2c241c;
             color: #e2d9cc;
@@ -249,7 +279,6 @@
             color: #e6bf7a;
         }
 
-        /* cookie баннер */
         .cookie-banner {
             position: fixed;
             bottom: 0;
@@ -279,13 +308,7 @@
             cursor: pointer;
             font-weight: bold;
         }
-        @media (max-width: 700px) {
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.6rem; }
-            .container { padding: 0 16px; }
-            .hero { padding: 30px 0; }
-        }
-        /* Кнопки мессенджеров */
+        
         .messenger-icons {
             display: flex;
             gap: 24px;
@@ -301,7 +324,7 @@
             gap: 6px;
             font-weight: bold;
         }
-        /* всплывающее окно exit */
+        
         .exit-popup {
             position: fixed;
             bottom: -100%;
@@ -325,31 +348,17 @@
             font-size: 28px;
             cursor: pointer;
         }
-    </style>
-    <!-- Yandex.Metrika -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(98765432, "init", {  // Замените на реальный ID счетчика
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/98765432" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- Google Analytics (пример) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-XXXXXXXXX-X');
-    </script>
+        @media (max-width: 700px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.6rem; }
+            .container { padding: 0 16px; }
+            .hero { padding: 30px 0; }
+            .gallery-item img {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -369,26 +378,24 @@
                     <a href="https://t.me/pisarev_law" target="_blank" class="btn">✍️ Отписать въ телеграмъ</a>
                 </div>
                 <div class="messenger-icons">
-                    <a href="https://wa.me/79603884759?text=Здравствуйте%2C%20Артемій%20Александровичъ.%20Мнѣ%20нужна%20Ваша%20помощь" class="mess-link">📱 WhatsApp</a>
-                    <a href="https://t.me/pisarev_law?text=Здравствуйте%2C%20Артемій%20Александровичъ.%20Мнѣ%20нужна%20Ваша%20помощь" class="mess-link">📩 Telegram</a>
+                    <a href="https://wa.me/79603884759?text=Здравствуйте%2C%20Артемій%20Александровичъ.%20Мнѣ%20нужна%20Ваша%20помощь" class="mess-link">📱 WhatsApp <span style="font-size:0.8rem;">(спросить начерно)</span></a>
+                    <a href="https://t.me/pisarev_law?text=Здравствуйте%2C%20Артемій%20Александровичъ.%20Мнѣ%20нужна%20Ваша%20помощь" class="mess-link">📩 Telegram <span style="font-size:0.8rem;">(спросить начерно)</span></a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://placehold.co/500x600/e9e2d0/8b5a2b?text=Адвокатъ+Писаревъ" alt="Присяжный поверенный Писаревъ Артемій Александровичъ" style="object-fit: cover; width:100%;">
+                <img src="1.jpg" alt="Присяжный поверенный Писаревъ Артемій Александровичъ" style="object-fit: cover; width:100%;" onerror="this.src='https://placehold.co/500x600/e9e2d0/8b5a2b?text=Адвокатъ+Писаревъ'">
             </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <!-- Обращение -->
     <section style="margin: 60px 0;">
         <h2>Обращеніе къ довѣрителю</h2>
         <p style="font-size:1.3rem;">Въ наше смутное время законъ не всегда милостивъ, но съ опытнымъ защитникомъ можно одолѣть любую напасть. Я, Писаревъ Артемій Александровичъ, принимаю на себя тяготу веденія дѣлъ уголовныхъ и гражданскихъ. Не сулю золотыхъ горъ, но даю слово: буду биться до послѣдняго, какъ за себя самого.</p>
         <a href="#callback-form" class="btn btn-gold" style="margin-top:24px;">Повѣрить мнѣ своё дѣло</a>
     </section>
 
-    <!-- Категории дел -->
     <section>
         <h2>Коли съ Вами случилось сiе…</h2>
         <div class="services-grid">
@@ -403,7 +410,6 @@
 
     <div class="divider">⚜️ ⚜️ ⚜️</div>
 
-    <!-- Услуги и расценки -->
     <section>
         <h2>Что я могу для Васъ сдѣлать и во что сiе обойдется</h2>
         <p style="margin-bottom:24px;"><em>Цѣны указаны безъ лукавства. Никакихъ тайныхъ платежей</em></p>
@@ -436,7 +442,25 @@
         <a href="#price-form" class="btn btn-gold">Узнать точную цѣну для моего дѣла</a>
     </section>
 
-    <!-- Схема работы -->
+    <!-- ГАЛЕРЕЯ ФОТОГРАФИЙ (1.jpg, 2.jpg, 3.jpg) -->
+    <section class="gallery">
+        <h2>Моменты изъ адвокатской практики</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="1.jpg" alt="Адвокат Писарев на приеме" onerror="this.src='https://placehold.co/400x300/e9e2d0/8b5a2b?text=Фото+1'">
+                <p>📸 На пріемѣ у довѣрителя</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2.jpg" alt="Рабочий кабинет адвоката" onerror="this.src='https://placehold.co/400x300/e9e2d0/8b5a2b?text=Фото+2'">
+                <p>🏛 Въ адвокатскомъ кабинетѣ</p>
+            </div>
+            <div class="gallery-item">
+                <img src="3.jpg" alt="Адвокат в суде" onerror="this.src='https://placehold.co/400x300/e9e2d0/8b5a2b?text=Фото+3'">
+                <p>⚖️ Въ залѣ судебныхъ засѣданій</p>
+            </div>
+        </div>
+    </section>
+
     <section style="margin: 60px 0;">
         <h2>Какъ я веду дѣла</h2>
         <div class="steps">
@@ -449,7 +473,6 @@
         <a href="#callback-form" class="btn">Положить начало</a>
     </section>
 
-    <!-- Примеры из практики -->
     <section>
         <h2>Что уже сдѣлано для другихъ</h2>
         <div class="services-grid">
@@ -460,7 +483,6 @@
         <a href="#price-form" class="btn">Желаю такого же исхода</a>
     </section>
 
-    <!-- Отзывы (полные тексты) -->
     <section style="margin: 60px 0;">
         <h2>Что говорятъ тѣ, кому я помогъ</h2>
         <div class="reviews-grid">
@@ -470,7 +492,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section>
         <h2>Часто вопрошаемое</h2>
         <div class="faq-grid">
@@ -481,7 +502,6 @@
         </div>
     </section>
 
-    <!-- Карта + контакты -->
     <section style="margin: 60px 0;">
         <h2>Гдѣ меня сыскать</h2>
         <div style="background:#fff2e0; padding:24px; border:1px solid #dac292;">
@@ -498,7 +518,6 @@
         </div>
     </section>
 
-    <!-- Форма захвата (повторная) -->
     <section id="callback-form" class="callback-form">
         <h3>Остались сумнѣнія? Напишите — отвѣчу въ теченіе четверти часа</h3>
         <form id="mainForm" action="#" method="POST">
@@ -511,7 +530,6 @@
         </form>
     </section>
     
-    <!-- Доп. форма для точной цены (якорь) -->
     <div id="price-form" class="callback-form" style="margin-top:20px;">
         <h3>Узнать точную цѣну для моего дѣла</h3>
         <form id="priceForm">
@@ -532,13 +550,11 @@
     </div>
 </footer>
 
-<!-- Cookie баннер -->
 <div class="cookie-banner" id="cookieBanner">
     <div class="cookie-text">Мы используем файлы cookie, чтобы улучшить работу сайта. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="/policy/" style="color:#e6bf7a;">Политикой конфиденциальности</a> и использованием cookie.</div>
     <button class="cookie-button" id="acceptCookies">Принять</button>
 </div>
 
-<!-- Exit Intent Popup -->
 <div id="exitPopup" class="exit-popup">
     <span class="close-exit" id="closeExit">&times;</span>
     <h3>Уже покидаете?</h3>
@@ -550,7 +566,6 @@
 </div>
 
 <script>
-    // Cookie logic
     if (!localStorage.getItem('cookiesAccepted')) {
         document.getElementById('cookieBanner').style.display = 'flex';
     }
@@ -559,7 +574,6 @@
         document.getElementById('cookieBanner').style.display = 'none';
     });
 
-    // exit intent
     let exitShown = false;
     document.addEventListener('mouseleave', function(e) {
         if (e.clientY <= 0 && !exitShown && !localStorage.getItem('exitClosed')) {
@@ -575,12 +589,10 @@
         e.preventDefault();
         alert('Спасибо! Я перезвоню в ближайшее время.');
         document.getElementById('exitPopup').classList.remove('active');
-        // тут можно отправить на почту через AJAX
     });
 
-    // Отправка форм (имитация отправки на почту)
     function sendFormData(formData, formName) {
-        fetch('/send.php', { // для демо - можно оставить, либо направить на email через ajax. Реально отправка на i@pisarev-top.ru потребует бэкенд.
+        fetch('/send.php', {
             method: 'POST',
             body: formData
         }).catch(e=>console.log('form submitted (demo)'));
@@ -597,10 +609,6 @@
         alert('Спасибо! Скоро уточню стоимость Вашего дела.');
         this.reset();
     });
-    // добавим согласие во всех формах, чекбоксы уже есть
-    // для корректной работы с картой и метрикой
-    console.log("Лендинг выполнен в старорусском стиле");
 </script>
-<!-- Доп. старые ссылки для имитации политики - реальные страницы нужно создать -->
 </body>
 </html>
